@@ -1,0 +1,76 @@
+:root {
+  --background-color: #545e56;
+  --button-color: #16bac5;
+  --afterHover-color: #5fbff9;
+  --display-color: #f26430;
+  --secondBackground-color: #2a2d34;
+  --text-color: #2a2d34;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--background-color);
+}
+
+#calculator {
+  max-width: 500px;
+  background-color: var(--secondBackground-color);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: var(--display-color);
+  font-size: 4rem;
+  text-align: left;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 40%;
+  border-color: var(--display-color);
+  background-color: var(--afterHover-color);
+  color: var(--text-color);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.operator {
+  background-color: var(--display-color);
+}
+
+button.operator:hover {
+  background-color: #ff8c42;
+}
+
+button.operator:active {
+  background-color: var(--display-color);
+}
+
+button:hover {
+  background-color: var(--button-color);
+}
+
+button:active {
+  background-color: var(--afterHover-color);
+}
